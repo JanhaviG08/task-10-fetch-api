@@ -1,0 +1,136 @@
+/* ===== Reset ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Background ===== */
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ===== Header (Top Only) ===== */
+.top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 24px;
+    background: linear-gradient(135deg, #fdfbfb, #f3f4f6);
+    border-bottom: 1px solid #e5e7eb;
+    text-align: center;
+    z-index: 100;
+}
+
+/* Header title */
+.top-header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 4px;
+}
+
+/* Header subtitle */
+.top-header p {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* Push content below fixed header */
+.container {
+    margin-top: 120px;
+}
+
+
+/* ===== Container ===== */
+.container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== Quote Card (Pinterest vibe) ===== */
+.quote-card {
+    background: white;
+    max-width: 420px;
+    width: 100%;
+    padding: 32px 28px;
+    border-radius: 20px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.quote-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ===== Quote Text ===== */
+#quote {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #1f2937;
+    margin-bottom: 18px;
+}
+
+/* ===== Author ===== */
+#author {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 26px;
+}
+
+/* ===== Button ===== */
+button {
+    padding: 12px 26px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ec4899, #f43f5e);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(244, 63, 94, 0.4);
+}
+
+/* ===== Loading & Error ===== */
+#loading {
+    margin-top: 14px;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.error {
+    margin-top: 14px;
+    color: #dc2626;
+    font-size: 0.9rem;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+    .quote-card {
+        padding: 26px 22px;
+    }
+
+    #quote {
+        font-size: 1.1rem;
+    }
+}
